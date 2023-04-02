@@ -1,0 +1,6 @@
+expname = girl10_head
+datadir = /home/hanxinyang/AD-NeRF/dataset/girl10
+basedir = /home/hanxinyang/AD-NeRF/dataset/girl10/logs
+near = 0.524187970161438
+far = 1.124187970161438
+testskip = 52

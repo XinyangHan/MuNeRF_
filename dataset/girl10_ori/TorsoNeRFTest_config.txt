@@ -1,0 +1,7 @@
+expname = girl10_com
+datadir = /home/hanxinyang/AD-NeRF/dataset/girl10
+basedir = /home/hanxinyang/AD-NeRF/dataset/girl10/logs
+near = 0.524187970161438
+far = 1.124187970161438
+with_test = 1
+test_pose_file = transforms_val.json

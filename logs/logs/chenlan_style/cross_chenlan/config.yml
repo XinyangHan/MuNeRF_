@@ -1,0 +1,149 @@
+dataset:
+  basedir: ./dataset/chenlan
+  far: 0.8
+  half_res: true
+  near: 0.2
+  no_ndc: true
+  scale: 0.25
+  style_id: '00001'
+  testskip: 1
+  type: blender
+experiment:
+  concat_global: true
+  concat_vgg: false
+  device: 0
+  device_backup: 0
+  feat_dim: 32
+  fix_density: true
+  g_step: 3
+  id: cross_chenlan
+  logdir: ./logs/chenlan_style
+  no_coarse_color: true
+  print_every: 100
+  randomseed: 42
+  save_every: 100
+  train_iters: 1000000
+  validate_every: 500
+loss:
+  addloss:
+    iter: 1
+    loss: true
+    type: landmark, patchgan, remove, histogram
+  coarse:
+    loss_weight: 1
+  convolution:
+    gen_loss: false
+    gen_weight: 100
+    low_loss: false
+  depth:
+    depth_loss: false
+    depth_weight1: 10
+    depth_weight2: 10
+  fine:
+    loss_weight: 1
+  histogram:
+    histogram_loss: true
+    histogram_loss_old: false
+    histogram_weight: 100
+  l2:
+    l2_iter: 5000
+    l2_loss: false
+    l2_weight1: 1
+    l2_weight2: 1
+  landmark:
+    landmark_loss: false
+    landmark_weight: 1
+    n_local: 12
+    start_iter: 0
+  patchgan:
+    new_patchgan_loss: true
+    patchgan_content_loss: true
+    patchgan_iter: 100
+    patchgan_loss: true
+    patchgan_weight1: 0.1
+    patchgan_weight2: 0.1
+  remove:
+    ldmk_weight: 1
+    remove_loss: true
+    remove_weight: 1
+    start_iter: 0
+models:
+  coarse:
+    hidden_size: 256
+    include_input_dir: false
+    include_input_xyz: true
+    log_sampling_dir: true
+    log_sampling_xyz: true
+    num_encoding_fn_dir: 4
+    num_encoding_fn_xyz: 10
+    num_layers: 4
+    skip_connect_every: 3
+    type: ConditionalBlendshapePaperNeRFModel
+    use_viewdirs: true
+  fine:
+    hidden_size: 256
+    include_input_dir: false
+    include_input_xyz: true
+    log_sampling_dir: true
+    log_sampling_xyz: true
+    num_encoding_fn_dir: 4
+    num_encoding_fn_xyz: 10
+    num_layers: 4
+    skip_connect_every: 3
+    type: ConditionalBlendshapePaperNeRFModel
+    use_viewdirs: true
+  patchgan:
+    dis_n_layer: 3
+    input_dim_a: 3
+    input_dim_b: 3
+  remove:
+    if_remove: true
+    input_nc: 3
+    ngf: 64
+    output_nc: 3
+    transformer: true
+    type: ResnetGenerator_newupsample
+    type2: ResnetGenerator_newupsample2
+nerf:
+  encode_direction_fn: positional_encoding
+  encode_position_fn: positional_encoding
+  train:
+    chunksize: 16384
+    lindisp: false
+    num_coarse: 32
+    num_fine: 16
+    num_random_rays: 32
+    perturb: true
+    radiance_field_noise_std: 0.1
+    white_background: false
+  use_viewdirs: true
+  validation:
+    chunksize: 1024
+    lindisp: false
+    num_coarse: 32
+    num_fine: 16
+    perturb: true
+    radiance_field_noise_std: 0.0
+    white_background: false
+optimizer:
+  lr: 0.0005
+  lr2: 0.0001
+  type: Adam
+scheduler:
+  lr_decay: 250
+  lr_decay_factor: 0.1
+transformer:
+  embed_cross_dim: 1024
+  embed_dim: 256
+  embed_patch_dim: 1024
+  if_global: true
+  init_gain: 0.02
+  init_type: normal
+  input_nc: 3
+  multi_scale: true
+  netG: TransEncoder
+  ngf: 64
+  no_dropout: false
+  norm: batch
+  output_nc: 3
+  use_resnet: false
