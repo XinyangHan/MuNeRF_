@@ -1,0 +1,3 @@
+CUDA_VISIBLE_DEVICES=3 python ./train_transformed_rays_hy.py --config ./config/girl4/w_beautyloss_global_patchgan_00011.yml  --load_checkpoint /home/yuanyujie/cvpr23/logs/girl4_style_00011/girl4_00011/checkpoint253097.ckpt --debug_dir ./debug/debug_girl4_00011_continue --color_continue_train
+
+CUDA_VISIBLE_DEVICES=2 python ./train_transformed_rays_hy.py --config ./config/girl4/w_beautyloss_global_patchgan_00011_scratch.yml  --load_checkpoint /home/yuanyujie/cvpr23/logs/girl4_style_00011_scratch/girl4_00011/checkpoint1002998.ckpt --debug_dir ./debug/debug_girl4_00011_scratch --color_continue_train

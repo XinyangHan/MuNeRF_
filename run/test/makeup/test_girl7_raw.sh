@@ -1,0 +1,2 @@
+# 1009 this works for girl6, check whether it works for girl7
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /home/yuanyujie/cvpr23/config/girl7/girl7_testH.yml --checkpoint /home/yuanyujie/cvpr23/logs/girl10_style_00006/girl10_00006/checkpoint74899.ckpt --savedir ./rendering/girl7_makeup/ --consistent

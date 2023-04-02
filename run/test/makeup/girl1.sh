@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /home/yuanyujie/cvpr23/config/girl1/girl1_testH_00056.yml --checkpoint /home/yuanyujie/cvpr23/logs/girl1_00056/girl1_00056/checkpoint160599.ckpt --savedir ./rendering/girl1_00056  --consistent

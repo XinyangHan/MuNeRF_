@@ -1,0 +1,2 @@
+python /home/yuanyujie/cvpr23/generate_landmark.py --path /home/yuanyujie/cvpr23/dataset/boy4/ori_imgs
+python /home/yuanyujie/cvpr23/generate_landmark.py --path /home/yuanyujie/cvpr23/dataset/girl10/ori_imgs

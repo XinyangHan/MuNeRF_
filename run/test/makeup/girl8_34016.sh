@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /data/hanxinyang/MuNeRF_latest/config/girl8/w_beautyloss_global_patchgan_34016.yml --checkpoint /data/hanxinyang/MuNeRF_latest/logs/girl8_34016/girl8_34016/checkpoint569099.ckpt --savedir ./rendering/girl8_makeup_34016/ 

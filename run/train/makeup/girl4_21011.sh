@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python ./train_transformed_rays_hy.py --config ./config/girl4/w_beautyloss_global_patchgan_21011.yml  --load_checkpoint /home/yuanyujie/cvpr23/logs/girl4_style_21011/girl4_21011/checkpoint248499.ckpt --debug_dir ./debug/debug_girl4_21011 --color_continue_train

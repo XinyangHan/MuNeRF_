@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python ./train_transformed_rays_hy.py --config ./config/girl5/w_beautyloss_global_patchgan_00191.yml  --load_checkpoint /home/yuanyujie/cvpr23/logs/finals/makeup/girl5_00191.ckpt --debug_dir ./debug/debug_girl5_00191 --color_continue_train

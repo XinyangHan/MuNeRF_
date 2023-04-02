@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python ./train_transformed_rays_hy.py --config /home/yuanyujie/cvpr23/config/boy1/boy1.yml --density_nerf --debug_dir ./debug/boy1_density_beauty  --continue_train /home/yuanyujie/cvpr23/logs/boy1_density/checkpoint468500.ckpt

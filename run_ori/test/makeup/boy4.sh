@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /data/hanxinyang/MuNeRF_latest/config/boy4/boy4_testH.yml --checkpoint /data/hanxinyang/MuNeRF_latest/logs/boy4_style_00005/boy4_00005/checkpoint965099.ckpt --savedir ./rendering/boy4_makeup_00005/ 

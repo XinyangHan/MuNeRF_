@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python ./eval_transformed_rays.py --config /home/yuanyujie/cvpr23/config/girl5/w_beautyloss_global_patchgan_00003.yml --checkpoint /home/yuanyujie/cvpr23/logs/girl5_00003/girl5_00003/checkpoint563599.ckpt --savedir ./rendering/girl5_makeup_00003/ 

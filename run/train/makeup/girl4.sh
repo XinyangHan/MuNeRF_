@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python ./train_transformed_rays_hy.py --config /home/yuanyujie/cvpr23/config/girl4/w_beautyloss_global_patchgan_00236.yml  --load_checkpoint /home/yuanyujie/cvpr23/logs/finals/nerface/girl4_checkpoint999999.ckpt --debug_dir ./debug/debug_girl4_00236_1

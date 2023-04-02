@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=2 python /data/hanxinyang/MuNeRF_latest/process_data_hy/MODnet/run.py  --inputdata /data/hanxinyang/MuNeRF_latest/dataset/$1/ori_imgs/ --jsonfiles /data/hanxinyang/MuNeRF_latest/dataset/$1/box.json
+# CUDA_VISIBLE_DEVICES=3 python /data/hanxinyang/MuNeRF_latest/process_data_hy/MODnet/run.py  --inputdata /data/hanxinyang/MuNeRF_latest/dataset/girl9/ori_imgs/ --jsonfiles /data/hanxinyang/MuNeRF_latest/dataset/girl9/box.json

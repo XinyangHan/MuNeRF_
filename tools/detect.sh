@@ -1,0 +1,24 @@
+python ./generate_landmark.py --path /data/hanxinyang/MuNeRF_latest/dataset/girl9/half_res/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

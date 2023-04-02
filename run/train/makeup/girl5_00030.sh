@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python ./train_transformed_rays_hy.py --config ./config/girl5/w_beautyloss_global_patchgan_00030.yml  --load_checkpoint /home/yuanyujie/makeupnerf/logs/girl5_density/checkpoint560600.ckpt --debug_dir ./debug/debug_girl5_00030 

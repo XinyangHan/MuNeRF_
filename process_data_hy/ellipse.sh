@@ -1,0 +1,2 @@
+python /data/hanxinyang/MuNeRF_latest/process_data_hy/ellipse.py 
+python /data/hanxinyang/MuNeRF_latest/process_data_hy/ellipse.py --mask_root /data/hanxinyang/MuNeRF_latest/dataset/boy4/00005/mask/nonmakeup --ldmk_root /data/hanxinyang/MuNeRF_latest/dataset/boy4/ori_imgs/landmark --ori_img_root /data/hanxinyang/MuNeRF_latest/dataset/boy4/ori_imgs

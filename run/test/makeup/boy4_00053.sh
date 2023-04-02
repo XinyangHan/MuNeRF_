@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /home/yuanyujie/cvpr23/config/boy4/boy4_testH.yml --checkpoint /home/yuanyujie/cvpr23/logs/boy4_style_00053/boy4_00053/checkpoint965099.ckpt --savedir ./rendering/boy4_makeup_00053/ 

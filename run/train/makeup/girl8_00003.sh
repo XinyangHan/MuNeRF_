@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python ./train_transformed_rays_hy.py --config ./config/girl8/w_beautyloss_global_patchgan_00003.yml  --load_checkpoint /home/yuanyujie/makeupnerf/logs/girl8_density/checkpoint512000.ckpt --debug_dir ./debug/debug_girl8_00003 

@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /data/hanxinyang/MuNeRF_latest/config/girl4/girl4_test_nerface.yml --checkpoint /data/hanxinyang/MuNeRF_latest/logs/girl4_density/checkpoint161400.ckpt --savedir ./rendering/girl4_nerface/ --no_makeup 

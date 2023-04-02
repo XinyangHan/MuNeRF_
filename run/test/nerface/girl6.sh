@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python ./eval_transformed_rays.py --config /home/yuanyujie/cvpr23/config/girl6/girl6_test_nerface.yml --checkpoint /home/yuanyujie/makeupnerf/logs/girl6_density/checkpoint835400.ckpt --savedir ./rendering/girl6_nerface/ --no_makeup  --consistent
