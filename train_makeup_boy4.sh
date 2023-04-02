@@ -1,0 +1,3 @@
+CUDA_VISIBLE_DEVICES=3 python ./train_transformed_rays_hy.py --config ./config/boy4/w_beautyloss_global_patchgan.yml  --load_checkpoint /data/hanxinyang/MuNeRF_latest/logs/girl5_style/girl5_21013_dense_new/checkpoint05999.ckpt --debug_dir ./debug/debug_boy4_style --color_continue_train
+
+#CUDA_VISIBLE_DEVICES=2 python ./train_transformed_rays_hy.py --config ./config/boy4/w_beautyloss_global_patchgan.yml  --load_checkpoint /data/hanxinyang/MuNeRF_latest/logs/boy4_density/checkpoint23300.ckpt --debug_dir ./debug/debug_boy4_style

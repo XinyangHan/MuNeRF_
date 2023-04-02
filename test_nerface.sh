@@ -1,0 +1,2 @@
+cd /data/hanxinyang/MuNeRF_latest/
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /data/hanxinyang/MuNeRF_latest/config/$1/$1_test_nerface.yml --checkpoint $2 --savedir ./rendering/$1_density/ --no_makeup

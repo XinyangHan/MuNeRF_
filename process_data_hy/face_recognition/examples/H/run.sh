@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python /data/hanxinyang/MuNeRF_latest/process_data_hy/face_recognition/examples/H/face_distance.py

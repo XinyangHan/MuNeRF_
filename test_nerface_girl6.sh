@@ -1,0 +1,2 @@
+
+CUDA_VISIBLE_DEVICES=2 python ./eval_transformed_rays.py --config /data/hanxinyang/MuNeRF_latest/config/girl6/girl6_test.yml --checkpoint /data/hanxinyang/MuNeRF_latest/logs/girl6_density/checkpoint835400.ckpt --savedir ./rendering/girl6_makeup/
