@@ -1,0 +1,11 @@
+pytest>=6, <7
+flake8
+mock
+pytest-cov
+codecov
+attrs
+tox
+portray
+wheel
+twine
+-r requirements.txt
