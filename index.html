@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MuNeRF: Robust Makeup Transfer in Neural
+Radiance Fields">
+  <meta name="keywords" content="Diffusion Model, 3D Reconstruction, Pose Estimation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MuNeRF: Robust Makeup Transfer in Neural
+Radiance Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://gafniguy.github.io/4D-Facial-Avatars/">
+            NerFace
+          </a>
+          <a class="navbar-item" href="https://github.com/Snowfallingplum/SSAT">
+            SSAT:
+          </a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MuNeRF: Robust Makeup Transfer in Neural Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="http://people.geometrylearning.com/yyj/">Yujie Yuan*</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/XinyangHan">Xinyang Han*</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=Iq4fyBAAAAAJ">Yue He</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.wgtn.ac.nz/fanglue.zhang">Fanglue Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://geometrylearning.com/lin/">Lin Gao</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">ICT, UCAS</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/MuNeRF_TVCG.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.03652"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/XinyangHan/MuNeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img style="width:950px" src="./static/images/teaser_img.png">
+      <h2 class="subtitle has-text-centered">
+        <p>Our method is able to transfer makeup styles (left column) to facial images of different poses and expressions while preserving the geometry and appearance consistency.</p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            There has been a high demand for facial makeup transfer tools in fashion e-commerce and virtual avatar generation.
+            Most of the existing makeup transfer methods are based on the generative adversarial networks. Despite their success in makeup transfer for a single image, they struggle to maintain the consistency of makeup under different poses and expressions of the same person. In this paper, we propose a robust makeup transfer method which consistently transfers the makeup style of a reference image to facial images in any poses and expressions.
+            Our method introduces the implicit 3D representation, neural radiance fields (NeRFs), to ensure the geometric and appearance consistency. It has two separate stages, including one basic NeRF module to reconstruct the geometry from the input facial image sequence, and a makeup module to learn how to transfer the reference makeup style consistently.
+            We propose a novel hybrid makeup loss which is specially designed based on the makeup characteristics to supervise the training of the makeup module. The proposed loss significantly improves the visual quality and faithfulness of the makeup transfer effects.
+            To better align the distribution between the transferred makeup and the reference makeup, a patch-based discriminator that works in the pose-independent UV texture space is proposed to provide more accurate control of the synthesized makeup.
+            Extensive experiments and a user study demonstrate the superiority of our network for a variety of different makeup styles.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title">Framework</h2>
+
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <td style="text-align:center;">
+              <img style="width:950px" src="./static/images/main_pipeline.jpg">
+          </td>
+            <h2 class="subtitle has-text-centered">
+              <strong>MuNeRF Framework.</strong> We employ a two-stage scheme. Firstly, we reconstruct the 3D NeRF representation of the input monocular video. Subsequently, we transfer the reference makeup style to different facial poses and expressions through a dedicated makeup module. A VGG network is introduced to extract global convolutional features which are fed into the upsampling module in the second stage to maintain 3D consistency of the makeup transfer results. The patch-based discriminator working on the facial UV texture maps is illustrated on the right. 'BG' denotes the background image and γ is a per-frame trainable vector used to eliminate estimation errors..
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title">Results</h2>
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <td style="text-align:center;">
+              <img style="width:950px" src="./static/images/video_compare.png">
+            </td>
+            <h2 class="subtitle has-text-centered">
+              Comparisons on video makeup transfer with PSGAN and SSAT.
+            </h2>
+          </div>
+        </div>
+
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <td style="text-align:center;">
+              <img style="width:950px" src="./static/images/black_transfer.png">
+            </td>
+            <h2 class="subtitle has-text-centered">
+              More makeup transfer examples.
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@ARTICLE{10443587,
+      author={Yuan, Yu-Jie and Han, Xinyang and He, Yue and Zhang, Fang-Lue and Gao, Lin},
+      journal={IEEE Transactions on Visualization and Computer Graphics}, 
+      title={MuNeRF: Robust Makeup Transfer in Neural Radiance Fields}, 
+      year={2024},
+      volume={},
+      number={},
+      pages={1-12},
+      keywords={Faces;Geometry;Image color analysis;Three-dimensional displays;Videos;Training;Image reconstruction;Makeup Transfer;Neural Radiance Field;Patch GAN},
+      doi={10.1109/TVCG.2024.3368443}}</code></pre>
+  </div>
+</section>
+
+<!-- 
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/abs/2404.03652">
+        <i class="fas fa-file-pdf"></i>
+      </a>v
+      <a class="icon-link" href="https://github.com/XinyangHan/MuNeRF" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
